@@ -21,7 +21,7 @@ Code is used only as a learning notes, so all credits goes to course instructor 
 
 ## Run tests
 
-<ol>
+<ul>
 <li>run tests in headless mode: <em>npx playwright test</em></li>
 <li>run tests in headed mode: <em>npx playwright test --headed</em></li>
 <li>run tests in debug mode: <em>npx playwright test --debug</em></li>
@@ -30,7 +30,7 @@ Code is used only as a learning notes, so all credits goes to course instructor 
 <li>run specifi test file: <em>npx playwright test tests/example.spec.ts</em></li>
 <li>run all tests by tag: <em>npx playwright test --grep "@myTag"</em></li>
 <li>run all tests except tag: <em>npx playwright test --grep-invert "@myTag"</em></li>
-</ol>
+</ul>
 
 <br />
 
@@ -50,7 +50,7 @@ Code is used only as a learning notes, so all credits goes to course instructor 
 
 ## Reporters
 
-<ol>
+<ul>
 <li>Run reporter with minimal information <em>npx playwright test --config=playwright.config.ts --project=Chromium --reporter=line</em></li>
 <li>Run default reporter <em>npx playwright test --config=playwright.config.ts --project=Chromium --reporter=list</em></li>
 <li>Run reporter with minimal information - just green/red dot <em>npx playwright test --config=playwright.config.ts --project=Chromium --reporter=dot</em></li>
@@ -59,7 +59,7 @@ Code is used only as a learning notes, so all credits goes to course instructor 
 <li>HTML report will create new folder: <em>test-results</em></li>
 <li>HTML report opens after finished: <em>Serving HTML report at http://localhost:9323</em></li>
 <li>HTML report to open after finished: <em>npx playwright show-report</em></li>
-</ol>
+</ul>
 
 ## Scripts
 
