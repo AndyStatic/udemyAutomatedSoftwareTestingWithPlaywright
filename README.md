@@ -48,6 +48,8 @@ Code is used only as a learning notes, so all credits goes to course instructor 
 <li>Can have more than 1 config, i.e. <em>playwright.config.ts</em> and <em>e2e.config.ts</em></li>
 </ol>
 
+<br />
+
 ## Reporters
 
 <ul>
@@ -61,6 +63,8 @@ Code is used only as a learning notes, so all credits goes to course instructor 
 <li>HTML report to open after finished: <em>npx playwright show-report</em></li>
 </ul>
 
+<br />
+
 ## Scripts
 
 <ol>
@@ -68,3 +72,53 @@ Code is used only as a learning notes, so all credits goes to course instructor 
 <li>Run as <em>npm run tests:chrome</em></li>
 <li>Can run with additional flags <em>npm run tests:chrome -- --headed</em></li>
 </ol>
+
+<br />
+
+## CI/CD Integration
+
+<ol>
+<li>Donwload <em>Generic Java package (.war)</em> from https://www.jenkins.io/download/</li>
+<li>Place downloaded <em>.war</em> file into the root directory</li>
+<li>In terminal: <em>java -jar jenkins.war --httpPort=8080 --enable-future-java</em> - will take a while to setup</li>
+<li>Open <em>http://localhost:8080/</em></li>
+<li>Unlock Jenkins by taking value from console under <em>Please use the following password to proceed to installation:</em></li>
+<li>Select <em>Install suggested plugin</em> option  - will take a while to setup</li>
+<li>Create First Admin User</li>
+<li>Instance Configuration - use same as before <em>http://localhost:8080/</em></li>
+<li>can Start using Jenkins</li>
+<li>click on <em>New Item</em></li>
+<li>Enter an item name: i.e. <em>Playwright</em></li>
+<li>select <em>Freestyle project</em> and click <em>OK</em></li>
+<li>Enter a Description: i.e. <em>e2e</em></li>
+<li>click on <em>Advanced</em> and check <em>Use custom workspace</em></li>
+<li>by using <em>pwd</em> in terminal get the path to use for <em>Directory</em> - you might need to change <em>\</em> to <em>/</em> in path</li>
+<li>in <em>Build Steps</em> select <em>Execute Windows batch command</em> - for Windows (Execute shell for iOS)</li>
+<li>use command from <em>package.json</em> i.e. <em>npm run tests:api</em></li>
+<li>click on <em>Save</em> so the project is created</li>
+<li>click on <em>Build Now</em> to run the tests</li>
+<li>Can specify reporter in <em>package.json</em> i.e. <em>"tests:api": "playwright test --config=api.config.ts --project=Chromium --reporter=list"</em> so results can be seen in <em>Build Console Output</em></li>
+<li>To add parametrs, click on <em>Configure</em></li>
+<li>Set checkbox for <em>This project is parameterized</em></li>
+<li>Choose <em>Choice Parameter</em></li>
+<li>Set <em>Name</em> as <em>script</em>, <em>Description as</em> <em>select script from package.json</em></li>
+<li>Set <em>Choices<em> as all the scripts from <em>package.json</em>, i.e. <em>tests:chrome<em>,<em>tests:firefox<em>, etc. as a list</li>
+<li>Modify <em>Build<em> command as <em>npm run %script%</em> (for Windows) and press <em>Save</em></li>
+<li>Can select what to run from <em>Build with Parameters</em></li>
+</ol>
+
+<br />
+
+## Cucumber
+
+<ul>
+<li>Additional packages: <em>npm install chai @cucumber/cucumber cucumber-html-reporter</em></li>
+<li>Folder: <em>/features</em></li>
+<li>Folder: <em>/page-objects/cucumber</em></li>
+<li>Folder: <em>/setup</em></li>
+<li>Folder: <em>/page-objects/cucumber</em></li>
+<li>File: <em>reporter.js</em></li>
+<li>File: <em>cucumber.js</em></li>
+<li>Add Cucumber for VSCode extension</li>
+<li>npm run test:cucumber</li>
+</ul>

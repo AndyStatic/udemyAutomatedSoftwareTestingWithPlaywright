@@ -9,7 +9,19 @@
     "tests:firefox": "playwright test --config=playwright.config.ts --project=Firefox",
     "tests:webkit": "playwright test --config=playwright.config.ts --project=Webkit",
     "tests:e2eLogin": "playwright test e2e/e2e-login.spec.ts --config=e2e.config.ts --project=Chromium --headed",
-    "tests:e2e": "playwright test --config=e2e.config.ts --project=Chromium --headed"
+    "tests:e2e": "playwright test --config=e2e.config.ts --project=Chromium --headed",
+    "tests:visual:chrome": "playwright test --config=visual.config.ts --project=Chromium",
+    "tests:visual:firefox": "playwright test --config=visual.config.ts --project=Firefox",
+    "tests:visual:webkit": "playwright test --config=visual.config.ts --project=Webkit",
+    "tests:visual:chrome:update": "playwright test --config=visual.config.ts --project=Chromium --update-snapshots",
+    "tests:visual:firefox:update": "playwright test --config=visual.config.ts --project=Firefox --update-snapshots",
+    "tests:visual:webkit:update": "playwright test --config=visual.config.ts --project=Webkit --update-snapshots",
+    "tests:api": "playwright test --config=api.config.ts --project=Chromium --reporter=list",
+    "tests:tips": "playwright test --config=tips.config.ts --project=Chromium --reporter=list",
+    "tests:custom-reporter": "playwright test --config=reporter.config.ts --project=Chromium --reporter=reporter.ts",
+    "jenkins-server": "java -jar jenkins.war --httpPort=8080 --enable-future-java",
+    "test:cucumber": "./node_modules/.bin/cucumber-js --require cucumber.js --require step-definitions/**/*.js -f json:cucumber_report.json --publish-quiet",
+    "report:cucumber": "node reporter.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +34,9 @@
   },
   "homepage": "https://github.com/AndyStatic/udemyAutomatedSoftwareTestingWithPlaywright#readme",
   "dependencies": {
-    "@playwright/test": "^1.31.2"
+    "@cucumber/cucumber": "^9.0.0",
+    "@playwright/test": "^1.31.2",
+    "chai": "^4.3.7",
+    "cucumber-html-reporter": "^5.5.1"
   }
 }
