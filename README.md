@@ -113,12 +113,13 @@ Code is used only as a learning notes, so all credits goes to course instructor 
 
 <ul>
 <li>Additional packages: <em>npm install chai @cucumber/cucumber cucumber-html-reporter</em></li>
+<li><em>npm i -D @playwright/test</em></li>
 <li>Folder: <em>/features</em></li>
-<li>Folder: <em>/page-objects/cucumber</em></li>
-<li>Folder: <em>/setup</em></li>
-<li>Folder: <em>/page-objects/cucumber</em></li>
+<li>Folder: <em>src/page-objects/cucumber</em></li>
+<li>Folder: <em>src/setup</em></li>
+<li>Folder: <em>src/steps</em></li>
 <li>File: <em>reporter.js</em></li>
 <li>File: <em>cucumber.js</em></li>
 <li>Add Cucumber for VSCode extension</li>
-<li>npm run test:cucumber</li>
+<li>run command from <em>test:cucumber</em> in terminal</li>
 </ul>

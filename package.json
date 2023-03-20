@@ -35,8 +35,10 @@
   "homepage": "https://github.com/AndyStatic/udemyAutomatedSoftwareTestingWithPlaywright#readme",
   "dependencies": {
     "@cucumber/cucumber": "^9.0.0",
-    "@playwright/test": "^1.31.2",
     "chai": "^4.3.7",
     "cucumber-html-reporter": "^5.5.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.31.2"
   }
 }

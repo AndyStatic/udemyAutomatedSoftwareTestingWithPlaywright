@@ -1,4 +1,4 @@
-const playwright = require("playwright");
+const playwright = require("@playwright/test");
 const { Before, After, BeforeAll, AfterAll } = require("@cucumber/cucumber");
 
 BeforeAll(async () => {
